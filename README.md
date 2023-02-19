@@ -4,11 +4,16 @@ A modern application's navigation bar.
 
 ## Purpose
 
-To learn building great navigation bars.
+To learn to build great navigation bars with cutting-edge design patterns.
+
+Used patterns:
+
+- Mega menu
+- K Bar
 
 ## Demo
 
-A live demo is available at
+A live demo is available at [https://awesome-react-navbar.web.app/](https://awesome-react-navbar.web.app/)
 
 ## Used technologies
 
