@@ -15,9 +15,9 @@ export const KBarWrapper = (props: KBarWrapperProps) => {
   return (
     <KBarProvider actions={initialActions}>
       <KBarPortal>
-        <KBarPositioner>
-          <KBarAnimator className="max-w-[600px] w-full rounded overflow-hidden">
-            <KBarSearch className="py-3 px-4 text-base w-full box-border outline-none border-none bg-slate-100 text-gray-800" />
+        <KBarPositioner className="backdrop-blur-sm">
+          <KBarAnimator className="max-w-[600px] w-full rounded overflow-hidden bg-slate-900">
+            <KBarSearch className="py-3 px-4 text-base w-full box-border outline-none border-none bg-slate-900 text-grey-100" />
             <RenderResults />
           </KBarAnimator>
         </KBarPositioner>

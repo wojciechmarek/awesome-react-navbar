@@ -34,7 +34,9 @@ export const ResultItem = React.forwardRef(
         //   borderLeft: `2px solid ${active ? "bg-slate-300" : "transparent"}`,
         // }}
         className={`py-3 px-4 flex items-center justify-between cursor-pointer border-l-2 border-solid ${
-          active ? "bg-slate-300" : "bg-slate-100"
+          active
+            ? "bg-slate-700 border-slate-200"
+            : "bg-slate-900 border-slate-900"
         }`}
       >
         <div className="flex gap-2 items-center text-base">
