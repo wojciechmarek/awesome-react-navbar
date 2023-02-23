@@ -58,7 +58,7 @@ export const Navbar = () => {
                 to="/contact"
                 style={({ isActive }) => (isActive ? { color: "red" } : {})}
               >
-                Contacts
+                Contact
               </NavLink>
             </li>
             <li>
