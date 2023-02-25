@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import { KbarInput } from "../ui-elements";
 import User from "../ui-elements/User/User";
 
 export const Navbar = () => {
@@ -85,7 +86,10 @@ export const Navbar = () => {
             </ul>
           </div>
         </div>
-        <User />
+        <div className="flex items-center justify-center gap-4">
+          <KbarInput />
+          <User />
+        </div>
       </div>
     </nav>
   );
