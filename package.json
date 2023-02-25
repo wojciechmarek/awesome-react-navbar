@@ -10,6 +10,7 @@
     "generate-changelog": "changelog generate"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.16",
     "kbar": "^0.1.0-beta.40",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
