@@ -35,25 +35,31 @@ export const ResultItem = React.forwardRef(
         // }}
         className={`py-3 px-4 flex items-center justify-between cursor-pointer border-l-2 border-solid ${
           active
-            ? "bg-slate-700 border-slate-200"
-            : "bg-slate-900 border-slate-900"
+            ? "bg-gray-300 dark:bg-slate-700 border-gray-600 dark:border-slate-300"
+            : "bg-gray-50 dark:bg-gray-900 border-gray-50 dark:border-gray-900"
         }`}
       >
         <div className="flex gap-2 items-center text-base">
-          {action.icon && action.icon}
+          {action.icon}
           <div className="flex flex-col">
             <div>
               {ancestors.length > 0 &&
                 ancestors.map((ancestor) => (
                   <React.Fragment key={ancestor.id}>
-                    <span className="opacity-50 mr-2">{ancestor.name}</span>
+                    <span className="opacity-50 mr-2 text-gray-700 dark:text-gray-200">
+                      {ancestor.name}
+                    </span>
                     <span className="mr-2">&rsaquo;</span>
                   </React.Fragment>
                 ))}
-              <span>{action.name}</span>
+              <span className="text-gray-700 dark:text-gray-200 font-semibold">
+                {action.name}
+              </span>
             </div>
             {action.subtitle && (
-              <span className="text-xs">{action.subtitle}</span>
+              <span className="text-xs text-gray-600 dark:text-gray-300">
+                {action.subtitle}
+              </span>
             )}
           </div>
         </div>
@@ -62,7 +68,7 @@ export const ResultItem = React.forwardRef(
             {action.shortcut.map((sc) => (
               <kbd
                 key={sc}
-                className="py-1 px-1.5 bg-black opacity-10 rounded text-sm"
+                className="py-1 px-1.5 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded text-sm"
               >
                 {sc}
               </kbd>
