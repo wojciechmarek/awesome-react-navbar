@@ -1,5 +1,10 @@
 import { createAction } from "kbar";
-import { HomeIcon } from "../icons";
+import {
+  ClockIcon,
+  PaperAirplaneIcon,
+  ReceiptRefundIcon,
+  HomeIcon,
+} from "@heroicons/react/24/outline";
 
 // const history = useHistory();
 
@@ -11,15 +16,34 @@ export const initialActions = [
     keywords: "back",
     section: "Navigation",
     perform: () => (window.location.href = "/"),
-    // icon: HomeIcon,
+    // icon: <ClockIcon />,
     subtitle: "Subtitles can help add more context.",
   },
   {
-    id: "changelogAction",
-    name: "Docs",
-    shortcut: ["g", "d"],
-    keywords: "documentation changelog",
-    section: "Navigation",
+    id: "workTimeAction",
+    name: "Work time",
+    shortcut: ["a", "w"],
+    keywords: "work time log",
+    section: "Add",
+    subtitle: "Log and manage your work time.",
+    perform: () => window.open("https://timc1.github.io/kbar/", "_blank"),
+  },
+  {
+    id: "vacationAction",
+    name: "Vacation",
+    shortcut: ["a", "v"],
+    keywords: "vacation log",
+    section: "Add",
+    subtitle: "Log and manage your days off.",
+    perform: () => window.open("https://timc1.github.io/kbar/", "_blank"),
+  },
+  {
+    id: "invoiceAction",
+    name: "Invoice",
+    shortcut: ["a", "i"],
+    keywords: "invoice log",
+    section: "Add",
+    subtitle: "Log and manage your invoices.",
     perform: () => window.open("https://timc1.github.io/kbar/", "_blank"),
   },
   {
