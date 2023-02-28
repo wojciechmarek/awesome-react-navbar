@@ -15,12 +15,12 @@ export interface SubLinksBoxProps {
 export const SubLinksBox = (props: SubLinksBoxProps) => {
   const { subLinks, extraLinks } = props;
   return (
-    <div className="absolute top-10 w-fit bg-slate-50 dark:bg-gray-900 shadow-[rgba(0,_0,_0,_0.24)_0px_0px_40px] shadow-slate-400 dark:shadow-gray-700 hidden group-hover:flex rounded-xl">
+    <div className="absolute top-10 w-fit bg-slate-50 dark:bg-gray-900 shadow-[rgba(0,_0,_0,_0.24)_0px_0px_40px] shadow-slate-400 dark:shadow-slate-700 hidden group-hover:flex rounded-xl">
       <ul className="p-2 h-fit w-96 flex-col ">
         {subLinks.map((subLink) => (
           <li
             key={subLink.name}
-            className="h-16 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-xl flex items-center justify-start cursor-pointer font-bold"
+            className="h-16 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-xl flex items-center justify-start cursor-pointer font-bold"
           >
             <div
               className={`h-10 w-10 ml-5 flex items-center justify-center rounded-lg ${subLink.color}`}
@@ -45,7 +45,7 @@ export const SubLinksBox = (props: SubLinksBoxProps) => {
             {extraLinks?.map((extraLink) => (
               <li
                 key={extraLink.name}
-                className="p-2 h-10 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg flex items-center justify-start cursor-pointer text-sm font-semibold text-gray-600 dark:text-gray-200"
+                className="p-2 h-10 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg flex items-center justify-start cursor-pointer text-sm font-semibold text-gray-600 dark:text-gray-200"
               >
                 {extraLink.name}
               </li>

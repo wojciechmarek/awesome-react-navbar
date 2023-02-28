@@ -14,21 +14,25 @@ const User = () => {
     {
       title: "Profile",
       icon: <IdentificationIcon />,
+      color: "bg-indigo-300 dark:bg-indigo-800",
       onclick: () => {},
     },
     {
-      title: theme === "light" ? "Dark Mode" : "Light Mode",
+      title: theme === "light" ? "Dark theme" : "Light theme",
       icon: theme === "light" ? <MoonIcon /> : <SunIcon />,
+      color: "bg-teal-300 dark:bg-teal-800",
       onclick: () => onChangeThemeClick(),
     },
     {
       title: "Settings",
       icon: <AdjustmentsVerticalIcon />,
+      color: "bg-fuchsia-300 dark:bg-fuchsia-800",
       onclick: () => {},
     },
     {
       title: "Logout",
       icon: <ExclamationCircleIcon />,
+      color: "bg-red-300 dark:bg-red-800",
       onclick: () => {},
     },
   ];
@@ -48,28 +52,32 @@ const User = () => {
 
   return (
     <div className="relative group">
-      <div className="flex gap-3 rounded items-center w-fit hover:bg-slate-800 cursor-pointer">
+      <div className="flex gap-3 h-10 rounded-lg items-center w-fit hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer">
         <img
           src="https://avatars.githubusercontent.com/u/10384315?v=4"
-          className="w-8 h-8 rounded-full my-2 ml-3"
+          className="w-7 h-7 rounded-full my-auto ml-3"
         />
         <p className="text-gray-800 dark:text-gray-200 font-bold mr-3">
           Andrew
         </p>
       </div>
-      <ul className="absolute w-60 h-fit bg-slate-300 dark:bg-slate-700 hidden group-hover:flex flex-col -left-[6em] rounded">
+      <ul className="absolute w-72 p-2 bg-slate-50 dark:bg-gray-900 shadow-[rgba(0,_0,_0,_0.24)_0px_0px_40px] shadow-slate-400 dark:shadow-slate-700 hidden group-hover:flex flex-col -left-[8em] rounded-xl">
         {items.map((item) => (
           <li
             key={item.title}
-            className="h-16 m-1 hover:bg-gray-500 rounded flex items-center justify-start cursor-pointer font-bold"
+            className="h-16 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-xl flex items-center justify-start cursor-pointer font-bold"
             onClick={item.onclick}
           >
-            <div className="h-8 w-8 ml-5 flex items-center justify-center bg-cyan-200 dark:bg-cyan-800  rounded-lg">
-              <div className="h-4/5 w-4/5 text-gray-800 dark:text-gray-200">
+            <div
+              className={`h-10 w-10 ml-5 flex items-center justify-center rounded-lg ${item.color}`}
+            >
+              <div className="h-3/5 w-3/5 text-gray-800 dark:text-gray-200">
                 {item.icon}
               </div>
             </div>
-            <p className="ml-5">{item.title}</p>
+            <p className="ml-5 text-gray-600 dark:text-gray-200">
+              {item.title}
+            </p>
           </li>
         ))}
       </ul>

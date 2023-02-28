@@ -186,7 +186,7 @@ export const MenuLinks = () => {
     <ul className="flex px-4">
       {links.map((link) => (
         <div className="relative group" key={link.name}>
-          <li className="text-gray-500 dark:text-gray-100 hover:text-gray-700 font-semibold cursor-pointer py-2 px-4 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg">
+          <li className="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 font-semibold cursor-pointer py-2 px-4 rounded-lg">
             {link.name}
           </li>
           <div className="hidden group-hover:block">

@@ -22,6 +22,9 @@ export const ResultItem = React.forwardRef(
       // +1 removes the currentRootAction; e.g.
       // if we are on the "Set theme" parent action,
       // the UI should not display "Set theme… > Dark"
+
+      // hover:bg-slate-200 dark:hover:bg-slate-800
+
       // but rather just "Dark"
       return action.ancestors.slice(index + 1);
     }, [action.ancestors, currentRootActionId]);
@@ -35,7 +38,7 @@ export const ResultItem = React.forwardRef(
         // }}
         className={`py-3 px-4 flex items-center justify-between cursor-pointer border-l-2 border-solid ${
           active
-            ? "bg-gray-300 dark:bg-slate-700 border-gray-600 dark:border-slate-300"
+            ? "bg-slate-200 dark:bg-slate-800 border-slate-800 dark:border-slate-200"
             : "bg-gray-50 dark:bg-gray-900 border-gray-50 dark:border-gray-900"
         }`}
       >
