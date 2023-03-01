@@ -1,16 +1,4 @@
-export interface SubLinksBoxProps {
-  subLinks: {
-    name: string;
-    description: string;
-    link: string;
-    color?: string;
-    icon: JSX.Element;
-  }[];
-  extraLinks?: {
-    name: string;
-    link: string;
-  }[];
-}
+import { SubLinksBoxProps } from "./interfaces";
 
 export const SubLinksBox = (props: SubLinksBoxProps) => {
   const { subLinks, extraLinks } = props;

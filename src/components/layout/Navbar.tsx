@@ -1,5 +1,6 @@
 import { KbarInput, MenuLinks } from "../ui-elements";
 import User from "../ui-elements/User/User";
+import { navigationLinks } from "./navigation-links";
 
 export const Navbar = () => {
   return (
@@ -11,7 +12,7 @@ export const Navbar = () => {
               My Company
             </span>
           </a>
-          <MenuLinks />
+          <MenuLinks menuLinks={navigationLinks} />
         </div>
         <div className="flex items-center justify-center gap-4">
           <KbarInput />
