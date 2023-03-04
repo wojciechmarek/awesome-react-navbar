@@ -42,7 +42,7 @@ export const MobileMenu = ({ menuLinks }: MobileMenuProps) => {
                     <ul className="mt-4">
                       {link.subLinks.map((subLink) => (
                         <li
-                          className="flex items-center px-3 py-4 font-semibold text-gray-800 rounded-lg cursor-pointer lg:px-4 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400"
+                          className="flex items-center px-1 py-4 font-semibold text-gray-800 rounded-lg cursor-pointer lg:px-4 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400"
                           key={subLink.name}
                         >
                           <div className="w-10 h-10 p-1">{subLink.icon}</div>
