@@ -40,7 +40,9 @@ export const Navbar = () => {
             <User />
           </div>
         </div>
-        <div className="md:hidden">{isMobileMenuOpen && <MobileMenu />}</div>
+        <div className="md:hidden">
+          {isMobileMenuOpen && <MobileMenu menuLinks={navigationLinks} />}
+        </div>
       </nav>
     </>
   );
