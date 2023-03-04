@@ -10,6 +10,8 @@ import { useState } from "react";
 const User = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme"));
 
+  const ms = new Date().getUTCMilliseconds();
+
   const items = [
     {
       title: "Profile",
@@ -54,12 +56,10 @@ const User = () => {
     <div className="relative group">
       <div className="flex items-center h-10 gap-3 rounded-lg cursor-pointer w-fit hover:bg-slate-200 dark:hover:bg-slate-800">
         <img
-          src="https://avatars.githubusercontent.com/u/10384315?v=4"
+          src={`https://api.dicebear.com/5.x/bottts-neutral/svg?seed=${ms}`}
           className="my-auto ml-3 rounded-full w-7 h-7"
         />
-        <p className="mr-3 font-bold text-gray-800 dark:text-gray-200">
-          Andrew
-        </p>
+        <p className="mr-3 font-bold text-gray-800 dark:text-gray-200">Steve</p>
       </div>
       <ul className="absolute w-72 p-2 bg-slate-50 dark:bg-gray-900 shadow-[rgba(0,_0,_0,_0.24)_0px_0px_40px] shadow-slate-400 dark:shadow-slate-700 hidden md:group-hover:flex flex-col -left-[8em] rounded-xl ">
         {items.map((item) => (
