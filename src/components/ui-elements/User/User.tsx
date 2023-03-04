@@ -52,12 +52,12 @@ const User = () => {
 
   return (
     <div className="relative group">
-      <div className="flex gap-3 h-10 rounded-lg items-center w-fit hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer">
+      <div className="flex items-center h-10 gap-3 rounded-lg cursor-pointer w-fit hover:bg-slate-200 dark:hover:bg-slate-800">
         <img
           src="https://avatars.githubusercontent.com/u/10384315?v=4"
-          className="w-7 h-7 rounded-full my-auto ml-3"
+          className="my-auto ml-3 rounded-full w-7 h-7"
         />
-        <p className="text-gray-800 dark:text-gray-200 font-bold mr-3">
+        <p className="mr-3 font-bold text-gray-800 dark:text-gray-200">
           Andrew
         </p>
       </div>
@@ -65,13 +65,13 @@ const User = () => {
         {items.map((item) => (
           <li
             key={item.title}
-            className="h-16 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-xl flex items-center justify-start cursor-pointer font-bold"
+            className="flex items-center justify-start h-16 font-bold cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-800 rounded-xl"
             onClick={item.onclick}
           >
             <div
               className={`h-10 w-10 ml-5 flex items-center justify-center rounded-lg ${item.color}`}
             >
-              <div className="h-3/5 w-3/5 text-gray-800 dark:text-gray-200">
+              <div className="w-3/5 text-gray-800 h-3/5 dark:text-gray-200">
                 {item.icon}
               </div>
             </div>

@@ -1,17 +1,34 @@
-import { CompanyLogo, KbarInput, MenuLinks } from "../ui-elements";
+import {
+  CompanyLogo,
+  HamburgerButton,
+  KbarInput,
+  MenuLinks,
+} from "../ui-elements";
 import User from "../ui-elements/User/User";
 import { navigationLinks } from "./navigation-links";
 
 export const Navbar = () => {
   return (
-    <nav className="bg-gray-50 dark:bg-gray-900 px-2 sm:px-4 h-16 flex items-center m-0">
-      <div className="container flex flex-wrap items-center justify-between mx-auto">
-        <div className="flex justify-center gap-8 items-center">
+    <nav className="flex items-center h-16 px-3 m-0 md:px-4 dark:bg-gray-900 bg-gray-50">
+      <div className="flex items-center justify-between w-full md:mx-4 lg:mx-8 2xl:w-[80em] 2xl:mx-auto">
+        <div className="flex items-center justify-center">
+          <div className="md:hidden">
+            <HamburgerButton />
+          </div>
+          <div className="hidden md:block">
+            <CompanyLogo />
+          </div>
+          <div className="relative hidden ml-4 text-gray-600 top-[1px] md:block">
+            <MenuLinks menuLinks={navigationLinks} />
+          </div>
+        </div>
+        <div className="absolute block transform -translate-x-1/2 md:hidden left-1/2">
           <CompanyLogo />
-          <MenuLinks menuLinks={navigationLinks} />
         </div>
         <div className="flex items-center justify-center gap-4">
-          <KbarInput />
+          <div className="hidden md:block">
+            <KbarInput />
+          </div>
           <User />
         </div>
       </div>
