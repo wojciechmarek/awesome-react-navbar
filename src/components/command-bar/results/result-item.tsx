@@ -19,23 +19,12 @@ export const ResultItem = React.forwardRef(
       const index = action.ancestors.findIndex(
         (ancestor) => ancestor.id === currentRootActionId
       );
-      // +1 removes the currentRootAction; e.g.
-      // if we are on the "Set theme" parent action,
-      // the UI should not display "Set theme… > Dark"
-
-      // hover:bg-slate-200 dark:hover:bg-slate-800
-
-      // but rather just "Dark"
       return action.ancestors.slice(index + 1);
     }, [action.ancestors, currentRootActionId]);
 
     return (
       <div
         ref={ref}
-        // style={{
-        //   background: active ? "bg-slate-300" : "transparent",
-        //   borderLeft: `2px solid ${active ? "bg-slate-300" : "transparent"}`,
-        // }}
         className={`py-3 px-4 flex items-center justify-between cursor-pointer border-l-2 border-solid ${
           active
             ? "bg-slate-200 dark:bg-slate-800 border-slate-800 dark:border-slate-200"
@@ -71,7 +60,11 @@ export const ResultItem = React.forwardRef(
             {action.shortcut.map((sc) => (
               <kbd
                 key={sc}
-                className="py-1 px-1.5 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded text-sm"
+                className={`py-1 px-1.5 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded text-sm ${
+                  active
+                    ? "bg-gray-100 dark:bg-gray-900"
+                    : "bg-gray-200 dark:bg-gray-700"
+                }`}
               >
                 {sc}
               </kbd>
