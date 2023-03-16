@@ -1,6 +1,7 @@
 import { MenuLinks } from "./interfaces";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface MobileMenuProps {
   menuLinks: MenuLinks[];
@@ -42,16 +43,18 @@ export const MobileMenu = ({ menuLinks }: MobileMenuProps) => {
                     <ul className="mt-4">
                       {link.subLinks.map((subLink) => (
                         <li
-                          className="flex items-center pl-1 py-4 font-semibold text-gray-800 rounded-lg cursor-pointer lg:px-4 dark:text-gray-200"
+                          className=" pl-1 py-4 font-semibold text-gray-800 rounded-lg cursor-pointer lg:px-4 dark:text-gray-200"
                           key={subLink.name}
                         >
-                          <div className="w-10 h-10 p-1">{subLink.icon}</div>
-                          <div className="flex flex-col ml-5">
-                            <p className="font-bold">{subLink.name}</p>
-                            <p className="text-xs text-gray-500">
-                              {subLink.description}
-                            </p>
-                          </div>
+                          <Link to={subLink.link} className="flex items-center">
+                            <div className="w-10 h-10 p-1">{subLink.icon}</div>
+                            <div className="flex flex-col ml-5">
+                              <p className="font-bold">{subLink.name}</p>
+                              <p className="text-xs text-gray-500">
+                                {subLink.description}
+                              </p>
+                            </div>
+                          </Link>
                         </li>
                       ))}
                     </ul>
