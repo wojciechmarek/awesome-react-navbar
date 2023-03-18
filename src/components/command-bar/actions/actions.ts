@@ -225,6 +225,24 @@ export const initialActions = [
     subtitle: "Jira tickets.",
     perform: () => window.open("https://timc1.github.io/kbar/", "_blank"),
   },
+  {
+    id: "perksBenefitsAction",
+    name: "Perks and Benefits",
+    shortcut: ["c", "b"],
+    keywords: "perks benefits",
+    section: "Company",
+    subtitle: "Perks and Benefits.",
+    perform: () => window.open("https://timc1.github.io/kbar/", "_blank"),
+  },
+  {
+    id: "referralsRewardsAction",
+    name: "Referrals and Rewards",
+    shortcut: ["c", "r"],
+    keywords: "referrals rewards",
+    section: "Company",
+    subtitle: "Referrals and Rewards.",
+    perform: () => window.open("https://timc1.github.io/kbar/", "_blank"),
+  },
 
   createAction({
     name: "This repo on GitHub",
