@@ -8,6 +8,7 @@ To learn to build great navigation bars with cutting-edge design patterns.
 
 Used patterns:
 
+- Light / dark theme
 - Mega menu
 - K Bar
 
