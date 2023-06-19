@@ -13,7 +13,7 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: ${{ secrets.API_KEY }},
+  apiKey: "${{ secrets.API_KEY }}",
   authDomain: "awesome-react-navbar.firebaseapp.com",
   projectId: "awesome-react-navbar",
   storageBucket: "awesome-react-navbar.appspot.com",
