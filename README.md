@@ -4,16 +4,26 @@ A modern application's navigation bar.
 
 ## Purpose
 
-To learn to build great navigation bars with cutting-edge design patterns.
+To learn to build great navigation bars using tailwind with modern design patterns.
 
 Used patterns:
 
+- Light / dark theme
 - Mega menu
 - K Bar
 
 ## Demo
 
 A live demo is available at [https://awesome-react-navbar.web.app/](https://awesome-react-navbar.web.app/)
+
+Screenshots:
+
+- Light theme:
+<img width="1459" alt="light" src="https://user-images.githubusercontent.com/27026036/233188360-9e7c18e5-24d8-4dd6-b9cf-f5ec5da1d171.png">
+
+- Dark theme:
+<img width="1460" alt="dark" src="https://user-images.githubusercontent.com/27026036/233188594-1e32603d-2937-4596-9e87-738d17807afb.png">
+
 
 ## Used technologies
 
